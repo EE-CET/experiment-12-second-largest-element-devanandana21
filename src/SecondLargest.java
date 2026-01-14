@@ -19,7 +19,9 @@ public class SecondLargest {
             if (arr[i] > largest) {
                 secondLargest = largest;
                 largest = arr[i];
-            } else if (arr[i] > secondLargest && arr[i] != largest) {
+            } else if (arr[i] == largest) {
+                secondLargest = largest; // Allow duplicates of largest
+            } else if (arr[i] > secondLargest) {
                 secondLargest = arr[i];
             }
         }
